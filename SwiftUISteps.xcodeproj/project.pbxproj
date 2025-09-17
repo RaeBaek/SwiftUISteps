@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		1495DF982E7AE167005349A9 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 1495DF972E7AE167005349A9 /* .gitignore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		1495DD062E7ADE8B005349A9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +31,7 @@
 		1495DCF82E7ADE8A005349A9 /* SwiftUISteps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUISteps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1495DD052E7ADE8B005349A9 /* SwiftUIStepsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIStepsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1495DD0F2E7ADE8B005349A9 /* SwiftUIStepsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIStepsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1495DF972E7AE167005349A9 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +80,7 @@
 		1495DCEF2E7ADE8A005349A9 = {
 			isa = PBXGroup;
 			children = (
+				1495DF972E7AE167005349A9 /* .gitignore */,
 				1495DCFA2E7ADE8A005349A9 /* SwiftUISteps */,
 				1495DD082E7ADE8B005349A9 /* SwiftUIStepsTests */,
 				1495DD122E7ADE8B005349A9 /* SwiftUIStepsUITests */,
@@ -212,6 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1495DF982E7AE167005349A9 /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
