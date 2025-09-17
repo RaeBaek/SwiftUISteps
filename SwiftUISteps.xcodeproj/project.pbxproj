@@ -50,6 +50,11 @@
 			path = SwiftUIStepsUITests;
 			sourceTree = "<group>";
 		};
+		1495DF9C2E7AE71D005349A9 /* Step1_Basics */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Step1_Basics;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				1495DF972E7AE167005349A9 /* .gitignore */,
+				1495DF9C2E7AE71D005349A9 /* Step1_Basics */,
 				1495DCFA2E7ADE8A005349A9 /* SwiftUISteps */,
 				1495DD082E7ADE8B005349A9 /* SwiftUIStepsTests */,
 				1495DD122E7ADE8B005349A9 /* SwiftUIStepsUITests */,
@@ -115,6 +121,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				1495DCFA2E7ADE8A005349A9 /* SwiftUISteps */,
+				1495DF9C2E7AE71D005349A9 /* Step1_Basics */,
 			);
 			name = SwiftUISteps;
 			packageProductDependencies = (
