@@ -7,6 +7,20 @@
 
 import SwiftUI
 
+/*
+ 1. 수직·수평·겹침 배치
+ - VStack: 세로 정렬
+ - HStack: 가로 정렬
+ - ZStack: 겹쳐 놓기
+
+ 2. 간격·정렬·크기 조절
+ - spacing, alignment
+ - padding, frame, Spacer
+
+ 3. UIKit AutoLayout과의 차이점
+ - 제약 조건을 "설명"하는 대신 구조를 선언하는 방식의 이해
+ */
+
 struct StackLayoutView: View {
     var body: some View {
         VStack(spacing: 20) {

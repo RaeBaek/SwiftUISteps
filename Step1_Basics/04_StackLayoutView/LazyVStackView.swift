@@ -7,6 +7,12 @@
 
 import SwiftUI
 
+/*
+ - ScrollView 안에서만 사용
+ - 수백 개 이상의 아이템을 다뤄도 메모리 부담이 훨씬 적음
+ - pinnedViews 옵션으로 섹션 헤더를 고정할 수도 있음
+ */
+
 struct LazyVStackView: View {
     var body: some View {
         ScrollView {
