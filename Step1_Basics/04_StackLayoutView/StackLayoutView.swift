@@ -31,6 +31,11 @@ struct StackLayoutView: View {
             .background(Color.gray.opacity(0.2))
 
             OverlapView()
+
+            HStack(spacing: 17) {
+                GeometryReaderView()
+                GeometryReaderView()
+            }
         }
         .padding()
     }
