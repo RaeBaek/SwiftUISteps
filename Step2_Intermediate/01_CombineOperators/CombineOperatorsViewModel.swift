@@ -13,7 +13,7 @@ final class CombineOperatorsViewModel: ObservableObject {
     private var cancellables = Set<AnyCancellable>()
 
     func start() {
-        // 1부터 10까지 발행, 짝수한 map * 2
+        // 1부터 10까지 발행, 짝수 filter 후 map * 2
         (1...10).publisher
             .filter { $0 % 2 == 0 }
             .map { $0 * 2 }
