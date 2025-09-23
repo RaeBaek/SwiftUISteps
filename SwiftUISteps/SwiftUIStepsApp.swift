@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct SwiftUIStepsApp: App {
+    @StateObject private var appState = AppState()
+
     var body: some Scene {
         WindowGroup {
-            NetworkingView()
+            RootView()
+                .environmentObject(appState)
         }
     }
 }

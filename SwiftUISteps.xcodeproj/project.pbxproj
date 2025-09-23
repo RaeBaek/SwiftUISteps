@@ -34,6 +34,21 @@
 		1495DF972E7AE167005349A9 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		1495E2602E8272EA005349A9 /* Exceptions for "Step2_Intermediate" folder in "SwiftUIStepsTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				04_NavigationAndState/Model/Event.swift,
+				04_NavigationAndState/View/EventDetailView.swift,
+				04_NavigationAndState/View/EventListView.swift,
+				04_NavigationAndState/View/RootView.swift,
+				04_NavigationAndState/View/SettingsView.swift,
+				04_NavigationAndState/ViewModel/AppState.swift,
+			);
+			target = 1495DD042E7ADE8B005349A9 /* SwiftUIStepsTests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		1495DCFA2E7ADE8A005349A9 /* SwiftUISteps */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
@@ -57,6 +72,9 @@
 		};
 		1495E22D2E81465A005349A9 /* Step2_Intermediate */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				1495E2602E8272EA005349A9 /* Exceptions for "Step2_Intermediate" folder in "SwiftUIStepsTests" target */,
+			);
 			path = Step2_Intermediate;
 			sourceTree = "<group>";
 		};
