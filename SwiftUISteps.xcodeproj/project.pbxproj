@@ -44,16 +44,14 @@
 				04_NavigationAndState/View/RootView.swift,
 				04_NavigationAndState/View/SettingsView.swift,
 				04_NavigationAndState/ViewModel/AppState.swift,
-			);
-			target = 1495DD042E7ADE8B005349A9 /* SwiftUIStepsTests */;
-		};
-		1495E2ED2E8418AC005349A9 /* Exceptions for "05_Persistence" folder in "SwiftUIStepsTests" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Persistence/FileManagerService.swift,
-				Persistence/UserDefaultsManager.swift,
-				View/FileManagerExampleView.swift,
-				View/UserDefaultsExampleView.swift,
+				05_Persistence/Model/PersistenceModel.xcdatamodeld,
+				05_Persistence/Persistence/CoreDataStack.swift,
+				05_Persistence/Persistence/FileManagerService.swift,
+				05_Persistence/Persistence/UserDefaultsManager.swift,
+				05_Persistence/View/CoreDataExampleView.swift,
+				05_Persistence/View/FileManagerExampleView.swift,
+				05_Persistence/View/UserDefaultsExampleView.swift,
+				05_Persistence/ViewModel/CoreDataViewModel.swift,
 			);
 			target = 1495DD042E7ADE8B005349A9 /* SwiftUIStepsTests */;
 		};
@@ -78,14 +76,6 @@
 		1495DF9C2E7AE71D005349A9 /* Step1_Basics */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Step1_Basics;
-			sourceTree = "<group>";
-		};
-		1495E2702E841797005349A9 /* 05_Persistence */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				1495E2ED2E8418AC005349A9 /* Exceptions for "05_Persistence" folder in "SwiftUIStepsTests" target */,
-			);
-			path = 05_Persistence;
 			sourceTree = "<group>";
 		};
 		1495E2CB2E8417A1005349A9 /* Step2_Intermediate */ = {
@@ -129,7 +119,6 @@
 				1495DF972E7AE167005349A9 /* .gitignore */,
 				1495DF9C2E7AE71D005349A9 /* Step1_Basics */,
 				1495E2CB2E8417A1005349A9 /* Step2_Intermediate */,
-				1495E2702E841797005349A9 /* 05_Persistence */,
 				1495DCFA2E7ADE8A005349A9 /* SwiftUISteps */,
 				1495DD082E7ADE8B005349A9 /* SwiftUIStepsTests */,
 				1495DD122E7ADE8B005349A9 /* SwiftUIStepsUITests */,
@@ -165,7 +154,6 @@
 			fileSystemSynchronizedGroups = (
 				1495DCFA2E7ADE8A005349A9 /* SwiftUISteps */,
 				1495DF9C2E7AE71D005349A9 /* Step1_Basics */,
-				1495E2702E841797005349A9 /* 05_Persistence */,
 				1495E2CB2E8417A1005349A9 /* Step2_Intermediate */,
 			);
 			name = SwiftUISteps;

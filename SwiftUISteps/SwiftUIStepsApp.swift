@@ -13,8 +13,7 @@ struct SwiftUIStepsApp: App {
 
     var body: some Scene {
         WindowGroup {
-            RootView()
-                .environmentObject(appState)
+            CoreDataExampleView()
         }
     }
 }
