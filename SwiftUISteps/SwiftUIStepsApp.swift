@@ -13,7 +13,7 @@ struct SwiftUIStepsApp: App {
 
     var body: some Scene {
         WindowGroup {
-            CoreDataExampleView()
+            CombineAdvancedView()
         }
     }
 }
