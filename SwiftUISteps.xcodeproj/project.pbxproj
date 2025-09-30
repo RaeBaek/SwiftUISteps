@@ -64,6 +64,13 @@
 				02_ConcurrencyCombine/Model/Album.swift,
 				02_ConcurrencyCombine/View/ConcurrencyCombineView.swift,
 				02_ConcurrencyCombine/ViewModel/ConcurrencyCombineViewModel.swift,
+				03_AdvancedNavigation/Model/Comment.swift,
+				03_AdvancedNavigation/View/ANSettingsView.swift,
+				03_AdvancedNavigation/View/CommentDetailView.swift,
+				03_AdvancedNavigation/View/HomeView.swift,
+				03_AdvancedNavigation/View/ProfileView.swift,
+				03_AdvancedNavigation/View/RootTabView.swift,
+				03_AdvancedNavigation/ViewModel/ANAppState.swift,
 			);
 			target = 1495DD042E7ADE8B005349A9 /* SwiftUIStepsTests */;
 		};
