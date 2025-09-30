@@ -26,6 +26,18 @@ struct ConcurrencyCombineView: View {
                     .store(in: &cancellables)
             }
 
+            Button("Fetch Album") {
+                viewModel.fetchAlbum()
+                    .sink(receiveCompletion: { completion in
+                        if case .failure(let error) = completion {
+                            viewModel.outputLog.append("❌ Error: \(error.localizedDescription)")
+                        }
+                    }, receiveValue: { album in
+                        viewModel.outputLog.append(album.title)
+                    })
+                    .store(in: &cancellables)
+            }
+
             List(viewModel.outputLog, id: \.self) { Text($0) }
         }
     }

@@ -62,3 +62,21 @@ final class ConcurrencyCombineViewModel: ObservableObject {
         return "Async result at \(Date().formatted())"
     }
 }
+
+extension ConcurrencyCombineViewModel {
+    func fetchAlbum() -> AnyPublisher<Album, Error> {
+        Future { promise in
+            Task {
+                do {
+                    let url = URL(string: "https://jsonplaceholder.typicode.com/albums/1")!
+                    let (data, _) = try await URLSession.shared.data(from: url)
+                    let album = try JSONDecoder().decode(Album.self, from: data)
+                    promise(.success(album))
+                } catch let error {
+                    promise(.failure(error))
+                }
+            }
+        }
+        .eraseToAnyPublisher()
+    }
+}

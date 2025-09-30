@@ -61,6 +61,7 @@
 				01_CombineAdvancedOperators/Model/User.swift,
 				01_CombineAdvancedOperators/View/CombineAdvancedView.swift,
 				01_CombineAdvancedOperators/ViewModel/CombineAdvanceViewModel.swift,
+				02_ConcurrencyCombine/Model/Album.swift,
 				02_ConcurrencyCombine/View/ConcurrencyCombineView.swift,
 				02_ConcurrencyCombine/ViewModel/ConcurrencyCombineViewModel.swift,
 			);
