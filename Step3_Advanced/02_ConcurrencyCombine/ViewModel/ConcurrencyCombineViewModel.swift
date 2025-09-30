@@ -25,6 +25,7 @@ final class ConcurrencyCombineViewModel: ObservableObject {
     @Published var outputLog: [String] = []
     let subject = PassthroughSubject<String, Never>()
 
+    private var cancellableTask: Task<Void, Never>?
     private var cancellables = Set<AnyCancellable>()
 
     init() {
@@ -115,5 +116,28 @@ extension ConcurrencyCombineViewModel {
         await MainActor.run {
             self.outputLog.append(text)
         }
+    }
+}
+
+extension ConcurrencyCombineViewModel {
+    func startCancellableTask() {
+        cancellableTask = Task {
+            for i in 1...10 {
+                try? await Task.sleep(nanoseconds: 500_000_000) // 0.5초 대기
+                guard !Task.isCancelled else {
+                    await MainActor.run {
+                        self.outputLog.append("🛑 Task 취소됨")
+                    }
+                    return
+                }
+                await MainActor.run {
+                    self.outputLog.append("⏱ Step \(i)")
+                }
+            }
+        }
+    }
+
+    func cancelTask() {
+        cancellableTask?.cancel()
     }
 }

@@ -42,6 +42,15 @@ struct ConcurrencyCombineView: View {
                 viewModel.sendAsyncMessage("Hello!")
             }
 
+            HStack {
+                Button("취소 가능한 Task 시작") {
+                    viewModel.startCancellableTask()
+                }
+                Button("Task 취소") {
+                    viewModel.cancelTask()
+                }
+            }
+
             List(viewModel.outputLog, id: \.self) { Text($0) }
         }
     }
