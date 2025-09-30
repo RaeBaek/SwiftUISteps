@@ -23,8 +23,23 @@ import Combine
 
 final class ConcurrencyCombineViewModel: ObservableObject {
     @Published var outputLog: [String] = []
+    let subject = PassthroughSubject<String, Never>()
+
     private var cancellables = Set<AnyCancellable>()
 
+    init() {
+        // Subject -> async Task 변환
+        subject
+            .sink { value in
+                Task {
+                    await self.handleMessage(value)
+                }
+            }
+            .store(in: &cancellables)
+    }
+}
+
+extension ConcurrencyCombineViewModel {
     // 1. Publisher -> Async/Await
     func startTimerAsync() {
         Task {
@@ -41,8 +56,11 @@ final class ConcurrencyCombineViewModel: ObservableObject {
             }
         }
     }
+}
 
-    // 2. Async -> Publisher
+
+extension ConcurrencyCombineViewModel {
+    // 2. Async -> Publisher / <String, Never>
     func fetchData() -> AnyPublisher<String, Never> {
         Future { promise in
             Task {
@@ -64,6 +82,7 @@ final class ConcurrencyCombineViewModel: ObservableObject {
 }
 
 extension ConcurrencyCombineViewModel {
+    // 3. Async -> Publisher/ <Album, Error>
     func fetchAlbum() -> AnyPublisher<Album, Error> {
         Future { promise in
             Task {
@@ -78,5 +97,23 @@ extension ConcurrencyCombineViewModel {
             }
         }
         .eraseToAnyPublisher()
+    }
+}
+
+extension ConcurrencyCombineViewModel {
+    // 4. PassThrougntSubject 양방향 변환
+    func sendAsyncMessage(_ text: String) {
+        Task {
+            try? await Task.sleep(nanoseconds: 1_000_000_000) // 1초 대기
+            await MainActor.run {
+                self.subject.send(text)
+            }
+        }
+    }
+
+    private func handleMessage(_ text: String) async {
+        await MainActor.run {
+            self.outputLog.append(text)
+        }
     }
 }

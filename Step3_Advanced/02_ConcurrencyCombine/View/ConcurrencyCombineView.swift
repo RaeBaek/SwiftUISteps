@@ -38,6 +38,10 @@ struct ConcurrencyCombineView: View {
                     .store(in: &cancellables)
             }
 
+            Button("양방향 메시지 전송") {
+                viewModel.sendAsyncMessage("Hello!")
+            }
+
             List(viewModel.outputLog, id: \.self) { Text($0) }
         }
     }
