@@ -83,7 +83,7 @@ extension ConcurrencyCombineViewModel {
 }
 
 extension ConcurrencyCombineViewModel {
-    // 3. Async -> Publisher/ <Album, Error>
+    // 3. Async -> Publisher<Album, Error>
     func fetchAlbum() -> AnyPublisher<Album, Error> {
         Future { promise in
             Task {

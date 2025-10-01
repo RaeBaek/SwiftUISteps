@@ -44,6 +44,8 @@
 				04_NavigationAndState/View/RootView.swift,
 				04_NavigationAndState/View/SettingsView.swift,
 				04_NavigationAndState/ViewModel/AppState.swift,
+				"05_Persistence/Model/FavoriteArticle+CoreDataClass.swift",
+				"05_Persistence/Model/FavoriteArticle+CoreDataProperties.swift",
 				05_Persistence/Model/PersistenceModel.xcdatamodeld,
 				05_Persistence/Persistence/CoreDataStack.swift,
 				05_Persistence/Persistence/FileManagerService.swift,
@@ -71,6 +73,14 @@
 				03_AdvancedNavigation/View/ProfileView.swift,
 				03_AdvancedNavigation/View/RootTabView.swift,
 				03_AdvancedNavigation/ViewModel/ANAppState.swift,
+				04_TestingAndModularization/Data/LocalCacheService.swift,
+				04_TestingAndModularization/Data/RemoteStaffService.swift,
+				04_TestingAndModularization/Domain/Staff.swift,
+				04_TestingAndModularization/Domain/StaffRepository.swift,
+				04_TestingAndModularization/Presentation/StaffListView.swift,
+				04_TestingAndModularization/Presentation/StaffListViewModel.swift,
+				04_TestingAndModularization/Tests/DIContainerTests.swift,
+				04_TestingAndModularization/Tests/MockStaffRepository.swift,
 			);
 			target = 1495DD042E7ADE8B005349A9 /* SwiftUIStepsTests */;
 		};
