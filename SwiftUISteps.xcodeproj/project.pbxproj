@@ -73,14 +73,16 @@
 				03_AdvancedNavigation/View/ProfileView.swift,
 				03_AdvancedNavigation/View/RootTabView.swift,
 				03_AdvancedNavigation/ViewModel/ANAppState.swift,
-				04_TestingAndModularization/Data/LocalCacheService.swift,
+				04_TestingAndModularization/Data/MockStaffRepository.swift,
 				04_TestingAndModularization/Data/RemoteStaffService.swift,
 				04_TestingAndModularization/Domain/Staff.swift,
 				04_TestingAndModularization/Domain/StaffRepository.swift,
 				04_TestingAndModularization/Presentation/StaffListView.swift,
 				04_TestingAndModularization/Presentation/StaffListViewModel.swift,
-				04_TestingAndModularization/Tests/DIContainerTests.swift,
-				04_TestingAndModularization/Tests/MockStaffRepository.swift,
+				05_PerformanceAndInstruments/Model/HeavyModel.swift,
+				05_PerformanceAndInstruments/View/PerformanceTestView.swift,
+				05_PerformanceAndInstruments/View/PerformanceTestView2.swift,
+				05_PerformanceAndInstruments/ViewModel/PerformanceViewModel.swift,
 			);
 			target = 1495DD042E7ADE8B005349A9 /* SwiftUIStepsTests */;
 		};

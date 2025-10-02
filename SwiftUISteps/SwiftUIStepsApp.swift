@@ -13,7 +13,7 @@ struct SwiftUIStepsApp: App {
 
     var body: some Scene {
         WindowGroup {
-            StaffListView(viewModel: StaffListViewModel(repository: RemoteStaffService()))
+            PerformanceTestView2()
         }
     }
 }
