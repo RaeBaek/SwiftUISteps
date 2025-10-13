@@ -12,8 +12,15 @@ final class DogDIContainer {
     private let dogAPI = DogAPI()
     private lazy var dogRepository: DogRepository = DogRepositoryImpl(api: dogAPI)
 
+    private let localDogRepository = LocalDogRepository()
+    private lazy var remoteDogRepository = RemoteDogRepository(api: dogAPI)
+    private lazy var combineRepository = CombinedDogRepository(
+        remote: remoteDogRepository,
+        local: localDogRepository
+    )
+
     // UseCases
-    lazy var fetchDogUseCase: FetchDogsUseCase = FetchDogsUseCaseImpl(repository: dogRepository)
+    lazy var fetchDogUseCase: FetchDogsUseCase = FetchDogsUseCaseImpl(repository: combineRepository)
 
     // Factory (ViewModel)
     func makeDogListViewModel() -> DogListViewModel {

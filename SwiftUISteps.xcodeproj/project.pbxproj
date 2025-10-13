@@ -90,7 +90,10 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				01_CleanArchitecture/Data/Network/DogAPI.swift,
+				01_CleanArchitecture/Data/Repository/CombinedDogRepository.swift,
 				01_CleanArchitecture/Data/Repository/DogRepositoryImpl.swift,
+				01_CleanArchitecture/Data/Repository/LocalDogRepository.swift,
+				01_CleanArchitecture/Data/Repository/RemoteDogRepository.swift,
 				01_CleanArchitecture/DI/DogDIContainer.swift,
 				01_CleanArchitecture/Domain/Entities/Dog.swift,
 				01_CleanArchitecture/Domain/Repositories/DogRepository.swift,
