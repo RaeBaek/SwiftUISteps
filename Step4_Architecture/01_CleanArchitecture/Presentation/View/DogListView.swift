@@ -37,6 +37,9 @@ struct DogListView: View {
                                 .font(.headline)
                             Text(dog.description)
                                 .foregroundStyle(.secondary)
+                            Text("Life: \(dog.life)")
+                            Text("Male Weight: \(dog.maleWeight)")
+                            Text("Female Weight: \(dog.femaleWeight)")
                         }
                     }
                 }
