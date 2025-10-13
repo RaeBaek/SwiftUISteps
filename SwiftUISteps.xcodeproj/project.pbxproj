@@ -80,9 +80,17 @@
 				04_TestingAndModularization/Presentation/StaffListView.swift,
 				04_TestingAndModularization/Presentation/StaffListViewModel.swift,
 				05_PerformanceAndInstruments/Model/HeavyModel.swift,
-				05_PerformanceAndInstruments/View/PerformanceTestView.swift,
-				05_PerformanceAndInstruments/View/PerformanceTestView2.swift,
+				05_PerformanceAndInstruments/View/PerformanceTestLazyVStack.swift,
+				05_PerformanceAndInstruments/View/PerformanceTestList.swift,
 				05_PerformanceAndInstruments/ViewModel/PerformanceViewModel.swift,
+			);
+			target = 1495DD042E7ADE8B005349A9 /* SwiftUIStepsTests */;
+		};
+		1495E5172E9D002D005349A9 /* Exceptions for "Step4_Architecture" folder in "SwiftUIStepsTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				01_CleanArchitecture/Data/Network/Dog.swift,
+				01_CleanArchitecture/Data/Repository/DogRepository.swift,
 			);
 			target = 1495DD042E7ADE8B005349A9 /* SwiftUIStepsTests */;
 		};
@@ -125,6 +133,14 @@
 			path = Step3_Advanced;
 			sourceTree = "<group>";
 		};
+		1495E50B2E9CFBEA005349A9 /* Step4_Architecture */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				1495E5172E9D002D005349A9 /* Exceptions for "Step4_Architecture" folder in "SwiftUIStepsTests" target */,
+			);
+			path = Step4_Architecture;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +175,7 @@
 				1495DF9C2E7AE71D005349A9 /* Step1_Basics */,
 				1495E2CB2E8417A1005349A9 /* Step2_Intermediate */,
 				1495E4992E86D551005349A9 /* Step3_Advanced */,
+				1495E50B2E9CFBEA005349A9 /* Step4_Architecture */,
 				1495DCFA2E7ADE8A005349A9 /* SwiftUISteps */,
 				1495DD082E7ADE8B005349A9 /* SwiftUIStepsTests */,
 				1495DD122E7ADE8B005349A9 /* SwiftUIStepsUITests */,
@@ -196,6 +213,7 @@
 				1495DF9C2E7AE71D005349A9 /* Step1_Basics */,
 				1495E2CB2E8417A1005349A9 /* Step2_Intermediate */,
 				1495E4992E86D551005349A9 /* Step3_Advanced */,
+				1495E50B2E9CFBEA005349A9 /* Step4_Architecture */,
 			);
 			name = SwiftUISteps;
 			packageProductDependencies = (

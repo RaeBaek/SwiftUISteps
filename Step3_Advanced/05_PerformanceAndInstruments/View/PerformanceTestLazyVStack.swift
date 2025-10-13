@@ -1,5 +1,5 @@
 //
-//  PerformanceTestView2.swift
+//  PerformanceTestLazyVStack.swift
 //  SwiftUISteps
 //
 //  Created by 백래훈 on 10/2/25.
@@ -14,7 +14,7 @@
 
 import SwiftUI
 
-struct PerformanceTestView2: View {
+struct PerformanceTestLazyVStack: View {
     @StateObject private var viewModel = PerformanceViewModel()
 
     var body: some View {

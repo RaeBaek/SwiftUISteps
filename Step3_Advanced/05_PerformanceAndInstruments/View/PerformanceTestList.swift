@@ -1,5 +1,5 @@
 //
-//  PerformanceTestView.swift
+//  PerformanceTestList.swift
 //  SwiftUISteps
 //
 //  Created by 백래훈 on 10/2/25.
@@ -13,7 +13,7 @@
 
 import SwiftUI
 
-struct PerformanceTestView: View {
+struct PerformanceTestList: View {
     @StateObject private var viewModel = PerformanceViewModel()
 
     var body: some View {
