@@ -89,8 +89,14 @@
 		1495E5172E9D002D005349A9 /* Exceptions for "Step4_Architecture" folder in "SwiftUIStepsTests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				01_CleanArchitecture/Data/Network/Dog.swift,
-				01_CleanArchitecture/Data/Repository/DogRepository.swift,
+				01_CleanArchitecture/Data/Network/DogAPI.swift,
+				01_CleanArchitecture/Data/Repository/DogRepositoryImpl.swift,
+				01_CleanArchitecture/DI/DogDIContainer.swift,
+				01_CleanArchitecture/Domain/Entities/Dog.swift,
+				01_CleanArchitecture/Domain/Repositories/DogRepository.swift,
+				01_CleanArchitecture/Domain/UseCase/FetchDogsUseCase.swift,
+				01_CleanArchitecture/Presentation/View/DogListView.swift,
+				01_CleanArchitecture/Presentation/ViewModel/DogListViewModel.swift,
 			);
 			target = 1495DD042E7ADE8B005349A9 /* SwiftUIStepsTests */;
 		};

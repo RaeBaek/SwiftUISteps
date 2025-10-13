@@ -11,9 +11,11 @@ import SwiftUI
 struct SwiftUIStepsApp: App {
     @StateObject private var appState = AppState()
 
+    private let container = DogDIContainer()
+
     var body: some Scene {
         WindowGroup {
-            PerformanceTestView2()
+            DogListView(container: container)
         }
     }
 }
