@@ -8,5 +8,5 @@
 import Combine
 
 protocol DogRepository {
-    func fetchDogs() -> AnyPublisher<[Dog], Error>
+    func fetchDogs() -> AnyPublisher<[Dog], NetworkError>
 }

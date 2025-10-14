@@ -5,16 +5,31 @@
 //  Created by 백래훈 on 10/13/25.
 //
 
+/*
+ 1. 다양한 에러를 NetworkError로 변환
+ 2. Data 레이어부터 Failure 타입을 Network로 통일하면 이후 분기가 쉬워짐
+ */
+
 import Foundation
 import Combine
 
 struct DogAPI {
-    func fetchAPI() -> AnyPublisher<[Dog], Error> {
+    func fetchAPI() -> AnyPublisher<[Dog], NetworkError> {
         let url = URL(string: "https://dogapi.dog/api/v2/breeds?page[number]=1")!
         return URLSession.shared.dataTaskPublisher(for: url)
             .map(\.data)
             .decode(type: DataDTO.self, decoder: JSONDecoder())
             .map { $0.data.map { $0.toDomain }}
+            .mapError { error -> NetworkError in
+                switch error {
+                case let urlError as URLError:
+                    return .network(urlError)
+                case let decoding as DecodingError:
+                    return .decoding(decoding)
+                default:
+                    return .unknown(error)
+                }
+            }
             .eraseToAnyPublisher()
     }
 }

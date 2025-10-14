@@ -15,7 +15,7 @@ final class RemoteDogRepository: DogRepository {
         self.api = api
     }
 
-    func fetchDogs() -> AnyPublisher<[Dog], Error> {
+    func fetchDogs() -> AnyPublisher<[Dog], NetworkError> {
         api.fetchAPI()
     }
 }

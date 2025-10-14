@@ -8,7 +8,7 @@
 import Combine
 
 protocol FetchDogsUseCase {
-    func execute() -> AnyPublisher<[Dog], Error>
+    func execute() -> AnyPublisher<[Dog], NetworkError>
 }
 
 final class FetchDogsUseCaseImpl: FetchDogsUseCase {
@@ -18,7 +18,7 @@ final class FetchDogsUseCaseImpl: FetchDogsUseCase {
         self.repository = repository
     }
 
-    func execute() -> AnyPublisher<[Dog], Error> {
+    func execute() -> AnyPublisher<[Dog], NetworkError> {
         repository.fetchDogs()
     }
 }

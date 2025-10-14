@@ -30,7 +30,7 @@ final class DogListViewModel: ObservableObject {
                 guard let self else { return }
                 self.isLoading = false
                 if case .failure(let error) = completion {
-                    self.errorMessage = error.localizedDescription
+                    self.errorMessage = error.errorDescription
                 }
             }, receiveValue: { [weak self] dogs in
                 guard let self else { return }
