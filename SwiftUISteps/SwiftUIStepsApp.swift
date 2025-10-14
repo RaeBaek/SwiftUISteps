@@ -15,7 +15,8 @@ struct SwiftUIStepsApp: App {
 
     var body: some Scene {
         WindowGroup {
-            DogListView(container: container)
+//            DogListView(container: container)
+            DogView()
         }
     }
 }

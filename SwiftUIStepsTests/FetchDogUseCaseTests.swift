@@ -10,9 +10,9 @@ import Combine
 
 /// MockRepository & UseCase 테스트
 final class MockDogRepository: DogRepository {
-    var subject = PassthroughSubject<[Dog], Error>()
+    var subject = PassthroughSubject<[Dog], NetworkError>()
 
-    func fetchDogs() -> AnyPublisher<[Dog], Error> {
+    func fetchDogs() -> AnyPublisher<[Dog], NetworkError> {
         subject.eraseToAnyPublisher()
     }
 }

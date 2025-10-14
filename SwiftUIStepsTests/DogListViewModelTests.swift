@@ -14,7 +14,7 @@ final class DogListViewModelTests: XCTestCase {
 
     // 고정된 응답만을 반환하는 단순 객체
     struct StubUseCase: FetchDogsUseCase {
-        func execute() -> AnyPublisher<[Dog], Error> {
+        func execute() -> AnyPublisher<[Dog], NetworkError> {
             Just([Dog(
                 id: "1",
                 type: "breed",
@@ -25,7 +25,7 @@ final class DogListViewModelTests: XCTestCase {
                 femaleWeight: "10 ~ 12",
                 hypoallergenic: true
             )])
-            .setFailureType(to: Error.self)
+            .setFailureType(to: NetworkError.self)
             .eraseToAnyPublisher()
         }
     }

@@ -101,6 +101,9 @@
 				01_CleanArchitecture/Domain/UseCase/FetchDogsUseCase.swift,
 				01_CleanArchitecture/Presentation/View/DogListView.swift,
 				01_CleanArchitecture/Presentation/ViewModel/DogListViewModel.swift,
+				02_CombineConcurrencyIntegration/Network/DogAPIAsync.swift,
+				02_CombineConcurrencyIntegration/View/DogView.swift,
+				02_CombineConcurrencyIntegration/ViewModel/DogViewModel.swift,
 			);
 			target = 1495DD042E7ADE8B005349A9 /* SwiftUIStepsTests */;
 		};
